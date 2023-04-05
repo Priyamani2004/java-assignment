@@ -1,0 +1,151 @@
+import java.util.*;
+/*Exercise1*/
+class  Assignment12 {
+public static void main(String[] args){
+String words="Fear leads to anger anger leads to hatred";
+String[] word=words.split(" ");
+int count=word.length;
+String answer="";
+for(int i=0; i<count; i++){
+  for(int j=i+1; j<count; j++){
+ if(word[i].equals(word[j])){
+answer+=word[i]+"\n";
+}
+}
+}
+System.out.println("number of words: "+count);
+System.out.println("duplicate words"+"\n"+answer);
+}
+}
+//------------------------------------------------------------------------------------------------------------//
+/*Exercise2*/
+class Assignment12{
+public static void main(String[] args){
+String[] arr1={"Good", "Morning","Good", "Priya"};
+String[] arr2={"Good", "Night", "Priya"};
+int length=arr1.length+arr2.length;
+String[] arr3=new String[length];
+int count=0;
+String answer="";
+for(int i=0; i<arr1.length; i++){
+arr3[count]=arr1[i];
+count++;
+}
+for(int i=0; i<arr2.length; i++){
+arr3[count]=arr2[i];
+count++;
+}
+for(int i=0; i<arr3.length; i++){
+ if(!answer.contains(arr3[i])){
+ answer+=arr3[i]+" ";
+  }
+  }
+  System.out.println(answer);
+  }
+  }
+//------------------------------------------------------------------------------------------------------------//
+/*Exercise3*/
+class Assignment12{
+public static void main(String[] args){
+String name="Manimegala";
+String answer="";
+char[] array=name.toCharArray();
+//first//
+for(int i=array.length-1; i>=0; i--){
+answer+=array[i];
+}
+System.out.println(answer);
+//second//
+StringBuffer sn=new StringBuffer();
+sn.append(name);
+System.out.println(sn.reverse());
+//third//
+StringBuilder sb=new StringBuilder();
+sb.append(name);
+System.out.println(sb.reverse());
+//fourth//
+String result="";
+for(int i=0; i<array.length; i++){
+result=array[i]+result;
+}
+System.out.println(result);
+//fifth//
+int start=0;
+String lastans="";
+int end=array.length-1;
+while(start<=end){
+char a=array[start];
+array[start]=array[end];
+array[end]=a;
+start++;
+end--;
+}
+for(int i=0; i<array.length; i++){
+lastans+=array[i];
+}
+System.out.println(lastans);
+}
+}
+//------------------------------------------------------------------------------------------------------------//
+/*Exercise4*/
+class Assignment12{
+public static void main(String[] args){
+String word="level";
+String answer="";
+char[] ch=word.toCharArray();
+//first//
+for(int i=ch.length-1; i>=0; i--){
+answer+=ch[i];
+}
+if(answer.equals(word)){
+System.out.println( word+" is a palindrome");
+}
+else{
+System.out.println( word+" is not a palindrome");
+}
+//second//
+StringBuffer buff=new StringBuffer();
+buff.append(word);
+buff.reverse();
+if(buff.toString().equals(word)){
+System.out.println( word+" is a palindrome");
+}
+else{
+System.out.println( word+" is not a palindrome");
+}
+//third//
+StringBuilder build=new StringBuilder();
+build.append(word);
+build.reverse();
+if(build.toString().equals(word)){
+System.out.println( word+" is a palindrome");
+}
+else{
+System.out.println( word+" is not a palindrome");
+}
+}
+}
+//------------------------------------------------------------------------------------------------------------//
+/*Exercise5*/
+class Assignment12{
+	public static void main(String[] args) {
+		String word="ABC";
+		String result="";
+		permutation(word,result);
+		
+		
+	}
+	static void permutation(String word,String answer){
+		if (word.length() == 0) {
+            System.out.println(answer);
+          
+        }
+		for (int i=0;i<word.length() ;i++ ) {
+			char letter=word.charAt(i);
+			String str = word.substring(0, i) +word.substring(i + 1);                
+ 
+            permutation(str, answer+letter);
+		}
+	}
+	
+}

@@ -1,0 +1,180 @@
+import java.util.*;
+/*Exercise1*/
+class circle{
+int r=10;
+double py=3.14;
+void area(){
+double are=py*r*r;
+System.out.println("The circle of Area is "+(are));
+}
+}
+class cylinder extends circle{
+int h=15;
+void volume(){
+double volum=py*r*r*h;
+System.out.println("The volume of cylinder is "+(volum));
+}
+}
+class Assignment9{
+public static void main(String[] args){
+ cylinder obj=new cylinder();
+ obj.volume();
+ obj.area();
+ }
+ }
+ 
+//------------------------------------------------------------------------------------------------------------//
+/*Exercise2*/
+class rectangle{
+int l=10;
+int b=5;
+void area(){
+int ara=l*b;
+System.out.println("The Area of rectangle is "+(ara));
+}
+}
+class cuboid extends rectangle{
+int h=15;
+void volume(){
+int volum=l*b*h;
+System.out.println("The volume of cuboid is "+(volum));
+}
+}
+class Assignment9{
+public static void main(String[] args){
+cuboid obj1=new cuboid();
+obj1.volume();
+ obj1.area();
+ }
+ }
+//------------------------------------------------------------------------------------------------------------//
+/*Exercise3*/
+class Member{
+String Name;
+int Age;
+long Phonenumber;
+String Address;
+float Salary;
+void printSalary(){
+System.out.println("The Salary is "+Salary);
+}
+}
+class Employee extends Member{
+String specialization;
+Employee(String n,int a, long ph,String Add,float salry){
+Name=n;
+Age=a;
+Phonenumber=ph;
+Address=Add;
+Salary=salry;
+specialization="Backend-Developer";
+}
+void Employeedetails(){
+System.out.println("Employee Details");
+System.out.println("Name: "+Name);
+System.out.println("Age: "+Age);
+System.out.println("Phonenumber: "+Phonenumber);
+System.out.println("Address: "+Address);
+System.out.println("specialization: "+specialization);
+}
+}
+class Manager extends Member{
+String specialization;
+String department;
+Manager(String n,int a, long ph,String Add,float salry){
+Name=n;
+Age=a;
+Phonenumber=ph;
+Address=Add;
+Salary=salry;
+department="Zoho Desk";
+}
+void  Managerdetails(){
+System.out.println(" Manager Details");
+System.out.println("Name: "+Name);
+System.out.println("Age: "+Age);
+System.out.println("Phonenumber: "+Phonenumber);
+System.out.println("Address: "+Address);
+System.out.println("department: "+department);
+}
+}
+class Assignment9{
+public static void main(String[] args){
+Employee obj1=new Employee("Manimegala.V",18,1143367096,"8/103, Northstreet,Ulagalpuram",30000);
+obj1.Employeedetails();
+obj1.printSalary();
+Manager obj2=new Manager("Priya.V",23,1558161541,"6,east street,Tenkasi",50000);
+obj2.Managerdetails();
+obj2.printSalary();
+}
+}
+//------------------------------------------------------------------------------------------------------------//
+/*Exercise4*/
+class Shape{
+void shape1(){
+System.out.println("This is shape");
+}
+}
+class Rectangle extends Shape{
+void shape2(){
+System.out.println("This is rectangular shape");
+}
+}
+class Circle extends Shape{
+void shape3(){
+System.out.println("This is circular shape");
+}
+}
+class Square extends Rectangle{
+void shape4(){
+System.out.println("Square is a Rectangle");
+}
+}
+class Assignment9{
+public static void main(String[] args){
+Square obj=new Square ();
+obj.shape1();
+obj.shape2();
+}
+}
+//------------------------------------------------------------------------------------------------------------//
+/*Exercise5*/
+class parent{
+void paren(){
+System.out.println("This is parent class" );
+}
+}
+class child extends parent{
+void child(){
+System.out.println("This is child class");
+}
+}
+class Assignment9{
+public static void main(String[] args){
+parent obj=new parent();
+obj.paren();
+children obj1=new children();
+obj1.child();
+obj1.paren();
+}
+}
+/* class parent{
+ private void paren(){
+System.out.println("This is parent class" );
+}
+}
+class child extends parent{
+void child(){
+System.out.println("This is child class");
+}
+}
+class Assignment9{
+public static void main(String[] args){
+parent obj=new parent();
+obj.paren();
+children obj1=new children();
+obj1.child();
+obj1.paren();
+}
+}
+*/

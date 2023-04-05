@@ -1,0 +1,117 @@
+import java.util.*;
+//quarter of the year
+class assignment2{
+public static void main (String[]args){
+Scanner input=new Scanner(System.in);
+System.out.print("Enter the month in integer");
+int data=input.nextInt();
+int month[]={1,2,3,4,5,6,7,8,9,10,11,12};
+if(month[0]<=data&&data<=month[2]){
+System.out.println("Month "+data+" is the first quarter");
+}
+else if(month[3]<=data&&data<=month[5]){
+System.out.println("Month "+data+" is the second quarter");
+}
+else if(month[6]<=data&&data<=month[8]){
+System.out.println("Month "+data+" is the third quarter");
+}
+else if(month[9]<=data&&data<=month[11]){
+System.out.println("Month "+data+" is the fourth quarter");
+}
+else{
+System.out.println("Invalid number");
+}
+}
+}
+//Product Array
+class product{
+ public static void main(String[] args){
+  Scanner input=new Scanner(System.in);
+  System.out.println("Enter the number of items ");
+  int lenth=input.nextInt();
+  int numbers[]=new int[lenth];
+  int produc=1;
+  
+  for( int i=0; i<lenth; i++) {
+   System.out.println("Enter the items"+(i+1)+" of the array: "); 
+   numbers[i]=input.nextInt();
+   produc*=numbers[i];
+  }
+  for(int i=0; i<lenth; i++){
+   int ans[]=new int[lenth];
+   ans[i]=produc/(numbers[i]);
+   System.out.println(ans[i]);
+  }
+ }
+}
+  // Count the divisors  
+class countdivisors{
+public static void main (String[]args){
+Scanner inp=new Scanner(System.in);
+System.out.print("Enter your number");
+int data=inp.nextInt();
+int count=0;
+int answer;
+for(int i=1; i<=data; i++){
+if(data%i==0){
+count++;
+}
+}
+System.out.println(count);
+}
+}
+//Summation
+class summation{
+public static void main (String[]args){
+Scanner inp=new Scanner(System.in);
+System.out.print("Enter your number");
+int data=inp.nextInt();
+int sum=0;
+for(int i=1; i<=data; i++){
+sum+=i;
+}
+System.out.println(sum);
+}
+}
+//Count of positives / sum of negatives
+class countpositive{
+ public static void main(String[] args) {
+  Scanner input=new Scanner(System.in);
+  System.out.println("Enter the number of items ");
+  int lenth=input.nextInt();
+  int numbers[]=new int[lenth];
+     
+  int count=0;
+  int sum=0;
+  for(int i=0; i<lenth; i++){
+   System.out.println("Enter the item"+(i+1)+" of the array: ");
+   numbers[i]=input.nextInt();
+   if(numbers[i]>0){
+    count++;
+   }
+   if(numbers[i]<0){
+    sum+=numbers[i];
+   }
+  }
+  int ans[]={count,sum};
+  System.out.println(ans[0]);
+  System.out.println(ans[1]);
+ }
+}
+//Square Every Digit and add it:
+class square{
+ public static void main(String[] args){
+  Scanner input=new Scanner(System.in);
+  System.out.print("Enter the length of  Number:");
+  int lenth=input.nextInt();
+  System.out.println("Enter the digits of  Number:");
+  int square=0;
+  
+  for(int i=0; i<lenth; i++){
+   int digit=input.nextInt();
+   square+=((digit)*(digit));
+   digit=0;
+  }
+  System.out.println(square);
+ }
+}
